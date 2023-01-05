@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, FC, ReactElement } from "react";
 import Alert from "./Alert";
 import { AlertProps, ListItemProps } from "./App.types";
 import List from "./List";
@@ -12,7 +12,9 @@ const getLocalStorage = () => {
   }
 };
 
-const App = () => {
+export interface IApp {}
+
+const App: FC<IApp> = (): ReactElement => {
   const [name, setName] = useState<string>("");
   const [list, setList] = useState<ListItemProps[]>(getLocalStorage());
   const [isEditing, setIsEditing] = useState<boolean>(false);
@@ -95,7 +97,7 @@ const App = () => {
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
-          <button type="submit" className="submit-btn">
+          <button type="submit" className="button-70">
             {isEditing ? "edit" : "submit"}
           </button>
         </div>

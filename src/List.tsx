@@ -1,8 +1,12 @@
-import React from "react";
+import React, { FC, ReactElement } from "react";
 import { FaEdit, FaTrash } from "react-icons/fa";
 import { ListComponentProps, ListItemProps } from "./App.types";
 
-const List = ({ items, removeItem, editItem }: ListComponentProps) => {
+const List: FC<ListComponentProps> = ({
+  items,
+  removeItem,
+  editItem,
+}: ListComponentProps): ReactElement => {
   return (
     <div className="grocery-list">
       {items.map((item: ListItemProps) => {

@@ -1,8 +1,13 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useEffect } from "react";
+import React, { FC, ReactElement, useEffect } from "react";
 import { AlertComponentProps } from "./App.types";
 
-const Alert = ({ msg, type, removeAlert, list }: AlertComponentProps) => {
+const Alert: FC<AlertComponentProps> = ({
+  msg,
+  type,
+  removeAlert,
+  list,
+}: AlertComponentProps): ReactElement => {
   useEffect(() => {
     const timeout = setTimeout(() => {
       removeAlert(false, "", "");

@@ -211,6 +211,7 @@ Grocery List
   font-size: 1rem;
   flex: 1 0 auto;
   color: var(--clr-grey-5);
+  outline: none;
 }
 .grocery::placeholder {
   font-family: var(--ff-secondary);
@@ -303,4 +304,22 @@ Grocery List
 }
 .clear-btn:hover {
   color: var(--clr-red-dark);
+}
+
+.button-70 {
+  background-image: linear-gradient(#0dccea, #0d70ea);
+  border: 0;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, .3) 0 5px 15px;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-family: Montserrat,sans-serif;
+  font-size: .9em;
+  margin: 5px;
+  padding: 10px 15px;
+  text-align: center;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
 }
